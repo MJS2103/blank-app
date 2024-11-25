@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col
-
+import requests 
 # Write directly to the app
 st.title(":strawberry: Customize Your Smoothie:watermelon:")
 st.write(
@@ -23,6 +23,7 @@ ingredients_list = st.multiselect(
     , max_selections=5
 )
 
+
 if ingredients_list:
     ingredients_string = ''
     
@@ -42,5 +43,7 @@ if ingredients_list:
            session.sql(my_insert_stmt).collect()
         
            st.success(f"Your Smoothie is ordered, {name_on_order}!", icon="✅")
+
+
 
 
