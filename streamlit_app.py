@@ -43,11 +43,11 @@ if ingredients_list:
         
         filtered_values = pb_df.loc[pb_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON']
 
-        if not filtered_values.empty:
+        #if not filtered_values.empty:
               search_on = filtered_values.iloc[0]  # Access the first row safely
-              #st.write(f'The search value for {fruit_chosen} is {search_on}.')
-        else:
-              #st.write(f'No search value found for {fruit_chosen}.')
+              st.write(f'The search value for {fruit_chosen} is {search_on}.')
+        ##else:
+              st.write(f'No search value found for {fruit_chosen}.')
 
  
             
