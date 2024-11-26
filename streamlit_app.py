@@ -21,7 +21,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 # Convert the Snowpark Dataframe to a Pandas Dataframe so we can use the LOC function 
 pb_df=my_dataframe.to_pandas()
-#filtered_df = pb_df.loc[pb_df['SEARCH_ON'] == True]
+filtered_df = pb_df.loc[pb_df['SEARCH_ON'] == True]
 #st.dataframe(filtered_df, use_container_width=True)
 #st.stop()
 
